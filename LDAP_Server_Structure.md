@@ -26,11 +26,11 @@ DC=bernardsplunk,DC=com
 
 ## How to check the connection from the splunk server backend
 ```bash
-ldapsearch -x -h 172.31.69.253 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -W
+ldapsearch -x -h 172.31.69.251 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -W
 ```
 ## What if i want to add my password to the ldapsearch command
 ```bash
-ldapsearch -x -h 172.31.69.253 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -w "@gjhh677334"
+ldapsearch -x -h 172.31.69.251 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -w "@gjhh677334"
 ```
 ## Ways to Hide the password
 ### Use an environment variable
@@ -122,7 +122,6 @@ This command will return the group Splunk Admins in the OU=Splunk Groups,OU=SPLU
 
 Step 2: Find Users in a Specific Group
 If you want to find users that are members of a particular group (e.g., Splunk Admins), you can use the memberOf filter.
-
 
 
 ## Example 1: Find Users in Splunk Admins Group:

@@ -47,57 +47,43 @@ set
 ```
 This will display both environment variables and shell variables, so it might show more than just the environment variables.
 
-1. Viewing All Environment Variables in a Script
-If you want to print all environment variables within a shell script, you can use printenv or env as part of the script:
-
-bash
-Copy code
-#!/bin/bash
-# Show all environment variables in the script
-printenv
-6. Check for Exported Environment Variables
+## Check for Exported Environment Variables
 If you're trying to see if an environment variable has been exported to the environment (i.e., available to all child processes), you can check by using:
 
-bash
-Copy code
+```bash
 export
+```
 This command lists all exported environment variables, including those defined in your session.
 
-7. Check for Environment Variables in System-Wide Files
+## Check for Environment Variables in System-Wide Files
 System-wide environment variables (those set for all users) are often found in /etc/profile, /etc/environment, or /etc/bash.bashrc. You can check these with:
-
-bash
-Copy code
+```bash
 cat /etc/environment
-Or for bash specifically:
+# Or for bash specifically:
+```
 
-bash
-Copy code
+```bash
 cat /etc/profile
-Example:
+```
 Let's say you set an environment variable LDAP_PASS like this in your ~/.bashrc:
 
-bash
-Copy code
-export LDAP_PASS="&&@Gogota20260918"
-You can check if it's set by running:
-
-bash
-Copy code
+```bash
+export LDAP_PASS="your password"
+```
+```bash
 echo $LDAP_PASS
+```
 This will return:
 
-css
-Copy code
-&&@Gogota20260918
+```css
+your password
+```
 If you don’t see the variable or it’s empty, ensure that you've sourced your .bashrc file after making changes:
 
-bash
-Copy code
+```bash
 source ~/.bashrc
+```
 This reloads the .bashrc file to apply any changes.
-
-Let me know if you need help with anything else!
 
 
 

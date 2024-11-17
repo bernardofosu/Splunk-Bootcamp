@@ -18,7 +18,7 @@ NB You have to open All IPCM at you AWS EC2 splunk server instance security grou
 
 #### Other way to test the connection
 ```bash
-telnet 172.31.69.253 389
+telnet 172.31.69.293 389
 ```
 ##### output
 ```bash
@@ -249,7 +249,10 @@ The maximum time limit in seconds to wait for LDAP searches to complete. This sh
 <20>
 The maximum amount of seconds to wait on a connection to the LDAP server without activity. As a connection could be a search, this must be greater than the search time limit. Enter -1 for an infinite timeout. This should be less than the UI timeout of 30s.
 
-
+```bash
 scp -i C:\Users\Administrator\Desktop\Splunk_Key.pem C:\Users\Administrator\Desktop\certificate.cer ec2-user@172.31.23.185:/tmp/
+```
 
-telnet 34.204.17.197 636
+```bash
+telnet 34.20.17.197 636
+```
