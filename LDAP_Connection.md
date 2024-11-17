@@ -5,7 +5,7 @@
 
 ### 1. LDAP strategy name *
 Enter a unique name for this strategy.
-Here you enter anyname that you want to give to your LDAP connection
+Here you enter any name that you want to give to your LDAP connection
 
 ### 2. Host *
 LDAP Host: You can use the private IP or DNS-resolved hostname or public IP address of your Active Directory or LDAP Server if its does not sit in the same local network.
