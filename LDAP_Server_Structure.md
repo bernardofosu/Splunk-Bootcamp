@@ -41,6 +41,11 @@ export LDAP_PASS="your_password_here"
 ```bash
 nano ~/.bashrc
 ```
+### How to reloads the .bashrc file to apply any changes
+```bash
+source ~/.bashrc
+```
+
 ```bash
 ldapsearch -x -h 172.31.69.253 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -w $LDAP_PASS
 ```
