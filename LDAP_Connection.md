@@ -12,9 +12,9 @@ LDAP Host: You can use the private IP or DNS-resolved hostname or public IP addr
 
 #### You can test if the Splunk server can connect the LDAP server's private IP using the following commands:
 ```bash
-ping <LDAP server's Private IP Address>
+ping <LDAP server's IP Address>
 ```
-NB You have to open All IPCM at you AWS EC2 splunk server instance security groups
+NB You have to open <All ICMP IPv4> at you AWS EC2 splunk server instance security groups
 
 #### Other way to test the connection
 ```bash
