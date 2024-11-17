@@ -1,5 +1,5 @@
 # Splunk LDAP Authentication Settings
-#### NB: Before  we start the process below  we have to first set up our Active Directory on Windows Server under Server Manager and Create some groups and users
+#### NB: Before  we start the process below  we have to first set up our Active Directory on Windows Server under Server Manager and Create some groups and users. Its did not work for me on the windows server 2025 but work fine on windows server 2022.
 
 ## LDAP connection settings
 
