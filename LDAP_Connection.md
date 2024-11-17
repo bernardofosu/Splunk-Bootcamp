@@ -164,7 +164,7 @@ sudo chmod 600 password.txt
 Try running ldapsearch with increased verbosity using the **-d** flag to get more information about what's happening:
 
 ```bash
-ldapsearch -x -d 255 -h 172.31.69.253 -b "OU=Splunk Groups,OU=SPLUNK,DC=bernardsplunk,DC=com" "(objectClass=group)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -y password.t
+ldapsearch -x -d 255 -h 172.31.69.253 -b "OU=Splunk Groups,OU=SPLUNK,DC=bernardsplunk,DC=com" "(objectClass=group)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -y password.txt
 ```
 
 ## User Settings
