@@ -28,6 +28,32 @@ DC=bernardsplunk,DC=com
 ```bash
 ldapsearch -x -h 172.31.69.251 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -W
 ```
+### The Output to Know the Meaning of Abbreviations 
+```bash
+# Splunk Users, Splunk Groups, SPLUNK, bernardsplunk.com
+dn: CN=Splunk Users,OU=Splunk Groups,OU=SPLUNK,DC=bernardsplunk,DC=com
+objectClass: top
+objectClass: group
+cn: Splunk Users
+member: CN=Ama Sika,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com
+member: CN=sir willy,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com
+distinguishedName: CN=Splunk Users,OU=Splunk Groups,OU=SPLUNK,DC=bernardsplunk
+ ,DC=com
+instanceType: 4
+whenCreated: 20241115154450.0Z
+whenChanged: 20241115174020.0Z
+uSNCreated: 16439
+uSNChanged: 20536
+name: Splunk Users
+objectGUID:: Iy9ULE2mNka99C1wvMuK1Q==
+objectSid:: AQUAAAAAAAUVAAAAZfcjHI6BaDDnDfY7UQQAAA==
+sAMAccountName: Splunk Users
+sAMAccountType: 268435456
+groupType: -2147483646
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=bernardsplunk,DC=com
+dSCorePropagationData: 16010101000000.0Z
+```
+
 ## What if i want to add my password to the ldapsearch command
 ```bash
 ldapsearch -x -h 172.31.69.251 -b "dc=bernardsplunk,dc=com" "(objectClass=*)" -D "CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com" -w "@gjhh677334"
@@ -225,3 +251,44 @@ CN=Splunk Admins,OU=Splunk Groups,OU=SPLUNK,DC=bernardsplunk,DC=com
 CN is an LDAP attribute that is used to uniquely identify objects (such as users, groups, or other entities) within a directory.
 It is typically used in Distinguished Names (DNs) to form the full unique path of an object in the LDAP directory.
 
+### The Output to Know the Meaning of Abbreviations 
+```bash
+# splunk service, Splunk Users, SPLUNK, bernardsplunk.com
+dn: CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplunk,DC=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: splunk service
+sn: service
+givenName: splunk
+distinguishedName: CN=splunk service,OU=Splunk Users,OU=SPLUNK,DC=bernardsplun
+ k,DC=com
+instanceType: 4
+whenCreated: 20241115154553.0Z
+whenChanged: 20241115155349.0Z
+displayName: splunk service
+uSNCreated: 16443
+memberOf: CN=Splunk Admins,OU=Splunk Groups,OU=SPLUNK,DC=bernardsplunk,DC=com
+uSNChanged: 16472
+name: splunk service
+objectGUID:: KSJ09prPh0KwsoBjfl2Vtw==
+userAccountControl: 512
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 133762457406868646
+lastLogoff: 0
+lastLogon: 133762458269616096
+pwdLastSet: 133761591539965853
+primaryGroupID: 513
+objectSid:: AQUAAAAAAAUVAAAAZfcjHI6BaDDnDfY7UgQAAA==
+accountExpires: 9223372036854775807
+logonCount: 0
+sAMAccountName: splunkservice
+sAMAccountType: 805306368
+userPrincipalName: splunkservice@bernardsplunk.com
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=bernardsplunk,DC=com
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 133761596299483642
+```
