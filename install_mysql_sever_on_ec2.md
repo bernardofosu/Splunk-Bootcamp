@@ -227,7 +227,13 @@ sudo apt install python3-pip  # For Python 3 Ubuntu
 sudo yum install python3-pip # for AWS linux
 ```
 
+## Installing streamlit and install mysql-connector-python
 ```bash
-pip --version
+pip install mysql-connector-python
+pip install streamlit
 ```
 
+## Clone our work we want to deploy from github
+```bash
+git clone https://github.com/bernardofosu/crud_mysl_streamlit.git
+```
